@@ -30,6 +30,11 @@ const server = createServer((request, response) => {
     return;
   }
 
+  if (pathname === '/book-appointment' || pathname.startsWith('/book-appointment/')) {
+    response.writeHead(301, { location: '/contact/', 'cache-control': 'no-store' }).end();
+    return;
+  }
+
   const relativePath = pathname === '/' ? 'index.html' : pathname.replace(/^\/+/, '');
   let target = resolve(publicRoot, relativePath);
   if (target !== publicRoot && !target.startsWith(`${publicRoot}${sep}`)) {

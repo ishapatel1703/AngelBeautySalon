@@ -1,0 +1,2 @@
+/book-appointment /contact/ 301
+/book-appointment/* /contact/ 301

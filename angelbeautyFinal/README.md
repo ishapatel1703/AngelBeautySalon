@@ -1,6 +1,6 @@
 # Angel Beauty Salon
 
-A five-page, dependency-free static website built with semantic HTML, CSS and JavaScript. Its pages are Home (`/`), Services (`/services/`), Gallery (`/gallery/`), Contact us (`/contact/`) and Book Appointment (`/book-appointment/`). Shared responsive navigation includes a Book Appointment button on every page.
+A four-page, dependency-free static website built with semantic HTML, CSS and JavaScript. Its pages are Home (`/`), Services (`/services/`), Gallery (`/gallery/`) and Contact us (`/contact/`). Book appointment links lead to Contact us, and the legacy `/book-appointment/` URL redirects there.
 
 ## Run and build
 
@@ -12,11 +12,11 @@ The home page shows a separate, seamless image slider for each of the nine servi
 
 ## Salon photos
 
-The supplied salon photos are optimized WebP files in `public/images/`. The Gallery page displays all 64 photos; each service on Services automatically cycles through three or four service-specific photos. Home gives every service its own animated strip. Keep meaningful `alt` text when replacing photos.
+The supplied salon photos are in `public/images/`. The Gallery page displays the supplied photo collection with service-led alternating image and content sections; each service on Services automatically cycles through three or four service-specific photos. Home gives every service its own animated strip. Keep meaningful `alt` text when replacing photos.
 
 ## Contact and bookings
 
-The Contact and Book Appointment forms are front-end demos: they validate fields but do not send or store visitor details. WhatsApp chat is linked to +91 79999 24521. The salon street address and opening hours were not supplied, so visitors can ask for them over WhatsApp instead of seeing invented details.
+The Contact form is a front-end demo: it validates fields but does not send or store visitor details. WhatsApp chat is linked to +91 79999 24521. The salon street address and opening hours were not supplied, so visitors can ask for them over WhatsApp instead of seeing invented details.
 
 ## Project files
 
@@ -24,8 +24,9 @@ The Contact and Book Appointment forms are front-end demos: they validate fields
 - `public/services/index.html` — nine-service catalogue.
 - `public/gallery/index.html` — salon photo gallery.
 - `public/contact/index.html` — contact information placeholders and demo enquiry form.
-- `public/book-appointment/index.html` — appointment request form.
+- `public/book-appointment/index.html` — legacy redirect to Contact us.
 - `public/styles.css` and `public/main.js` — shared responsive design and interactions.
 - `public/images/` — optimized WebP salon photography supplied for this site.
+- `public/_redirects` — legacy appointment route redirects for static hosting.
 - `public/manus-routes.json` — declared public page routes.
 - `server.mjs` and `scripts/build.mjs` — clean static route preview and build helpers.
